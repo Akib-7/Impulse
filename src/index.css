@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: "NullShock"; /* Name of the font to use in CSS */
+  src: url("/src/Fonts/Nulshock.ttf") format("truetype"); /* Path to the font file */
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Prevent horizontal scrolling */
+
+/* Webkit custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #0d0d0d;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: rgb(255, 255, 255);
+}
+
+/* Optional: Ensure box-sizing is set globally for better layout control */
+
+body {
+  background-color: rgb(0, 0, 0);
+  /* White for bigger devices */
+}
+/* Prevent scrolling for WebKit browsers */
+.no-scroll {
+  height: 100vh;
+  width: 100%; /* Prevent horizontal scrolling */
+  position: fixed; /* Lock the body in place */
+  top: 0;
+  left: 0;
+  /* Disable touch-based scrolling on WebKit */
+}

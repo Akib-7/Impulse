@@ -1,0 +1,47 @@
+<div className="w-[60vw] h-full relative  overflow-hidden flex justify-center items-center">
+            {/* Full-width and height SVG */}
+            <svg
+              viewBox="0 0 320 180"
+              className="w-full h-full absolute top-0 left-0"
+              fill="none"
+              stroke="black"
+            >
+              {/* Defining a pattern to set the image as a background inside the SVG */}
+              <defs>
+                <pattern
+                  id="bg-image"
+                  patternUnits="userSpaceOnUse"
+                  width="320"
+                  height="180"
+                >
+                  <image
+                    href={L1}
+                    x="0"
+                    y="0"
+                    width="320"
+                    height="180"
+                    preserveAspectRatio="xMidYMid slice"
+                  />
+                </pattern>
+              </defs>
+
+              {/* Applying the background image via fill */}
+              <path
+                d="M.38 180.38V.38h206.04l23.41 23.4h90.55v156.6H.38z"
+                style={{
+                  stroke: "black",
+                  strokeMiterlimit: 0,
+                  strokeWidth: "0px",
+                  fill: "url(#bg-image)", // Apply the pattern as a fill
+                }}
+              ></path>
+            </svg>
+
+            {/* Elements on top of the SVG */}
+            <div className="absolute w-full h-full flex items-center justify-center z-10">
+              {/* Example Button */}
+              {/* <button className="px-4 py-2 bg-blue-600 text-white rounded-lg">
+                Click Me
+              </button> */}
+            </div>
+          </div>
