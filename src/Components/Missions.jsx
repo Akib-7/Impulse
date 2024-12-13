@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import astronaut from "../assets/astronaut2.webp";
+import astronaut from "../assets/Astronaut2.webp";
 import p1 from "../assets/planet1.webp";
 import p2 from "../assets/planet2.webp";
 import p3 from "../assets/planet3.webp";
