@@ -5,9 +5,8 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { assets } from "./assets";
 const LoadingScreen = ({ loadMethod }) => {
-  const [count, setCount] = useState(0);
   const [loadedAsset, setLoadedAsset] = useState(2);
-  const [percent, setPercent] = useState(0);
+
   const [totalAssets, setTotalAssets] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
 
@@ -27,7 +26,6 @@ const LoadingScreen = ({ loadMethod }) => {
       const img = new Image();
       img.src = `${asset}?cacheBuster=${Date.now()}`;
       img.onload = () => {
-        console.log("Image Loaded");
         updateProgress();
       };
       img.onerror = () => {

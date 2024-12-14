@@ -215,6 +215,7 @@ const SpaceVehicles = () => {
               >
                 <img
                   src={src}
+                  loading="lazy"
                   alt=""
                   style={{
                     width: "80%",

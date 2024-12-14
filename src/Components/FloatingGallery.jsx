@@ -289,6 +289,7 @@ const FloatingGallery = () => {
           className="IMAGE-CONTAINER  opacity-0 IMAGE-1 absolute group cursor-pointer  flex flex-col items-center justify-center    translate-y-[50%] translate-x-[-50%] left-1/2 w-[350px] h-[300px]  overflow-hidden   rounded-3xl    border-white"
         >
           <img
+            loading="lazy"
             style={{
               width: "100%",
               height: "100%",
@@ -325,6 +326,7 @@ const FloatingGallery = () => {
           className="IMAGE-CONTAINER  opacity-0 IMAGE-2 absolute group cursor-pointer  flex flex-col items-center justify-center    translate-y-[50%] translate-x-[-50%] left-1/2 w-[350px] h-[300px]  overflow-hidden   rounded-3xl    border-white"
         >
           <img
+            loading="lazy"
             style={{
               width: "100%",
               height: "100%",
@@ -361,6 +363,7 @@ const FloatingGallery = () => {
           className="IMAGE-CONTAINER  opacity-0 IMAGE-3 group cursor-pointer  absolute flex flex-col items-center justify-center     translate-y-[50%] translate-x-[-50%] left-1/2 w-[450px] h-[250px]  overflow-hidden   rounded-3xl    border-white"
         >
           <img
+            loading="lazy"
             style={{
               width: "100%",
               height: "100%",
@@ -397,6 +400,7 @@ const FloatingGallery = () => {
           className="IMAGE-CONTAINER  opacity-0 IMAGE-4 group cursor-pointer  absolute flex flex-col items-center justify-center     translate-y-[50%] translate-x-[-50%] left-1/2 w-[400px] h-[300px]  overflow-hidden   rounded-3xl    border-white"
         >
           <img
+            loading="lazy"
             style={{
               width: "100%",
               height: "100%",
@@ -433,6 +437,7 @@ const FloatingGallery = () => {
           className="IMAGE-CONTAINER  opacity-0 IMAGE-5 group cursor-pointer absolute flex flex-col items-center justify-center   translate-y-[50%] translate-x-[-50%] left-1/2 w-[300px] h-[300px]  overflow-hidden   rounded-3xl    border-white"
         >
           <img
+            loading="lazy"
             style={{
               width: "100%",
               height: "100%",
@@ -469,6 +474,7 @@ const FloatingGallery = () => {
           className="IMAGE-CONTAINER  opacity-0 IMAGE-6 group cursor-pointer absolute flex flex-col items-center justify-center     translate-y-[50%] translate-x-[-50%] left-1/2 w-[250px] h-[350px]  overflow-hidden   rounded-3xl    border-white"
         >
           <img
+            loading="lazy"
             style={{
               width: "100%",
               height: "100%",

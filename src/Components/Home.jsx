@@ -251,6 +251,7 @@ const Home = () => {
         className="absolute top-0 w-[99.6vw] h-screen left-1/2 translate-x-[-50%]"
       >
         <img
+          loading="eager"
           src={H}
           alt="Background Image"
           className="w-full h-full object-cover object-center"

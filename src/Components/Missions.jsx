@@ -110,6 +110,7 @@ Our goal is not just to explore space but to establish a meaningful presence in 
           <div className="w-full h-full relative ">
             <div className="w-[12vw] shadow-md     h-[20vw]   absolute top-[250px] right-[300px]  ">
               <img
+                loading="lazy"
                 className="w-[100%] h-[100%]  object-cover "
                 src={astro}
                 alt=""
@@ -117,6 +118,7 @@ Our goal is not just to explore space but to establish a meaningful presence in 
             </div>
             <div className=" w-[18vw] h-[12vw] shadow-md  -rotate-45 rounded-3xl overflow-hidden absolute top-[600px] left-[200px]   ">
               <img
+                loading="lazy"
                 className="w-[100%] h-[100%] object-cover "
                 src={saturn}
                 alt=""
@@ -127,6 +129,7 @@ Our goal is not just to explore space but to establish a meaningful presence in 
               className="w-[15vw] h-[20vw] shadow-md     rounded-3xl   absolute top-[1000px] right-[250px]"
             >
               <img
+                loading="lazy"
                 className="w-[100%] h-[100%] object-contain "
                 src={spaceCraft}
                 alt=""
@@ -253,6 +256,7 @@ const FocalImage = () => {
                 </h1>
               </div>
               <img
+                loading="lazy"
                 style={{ filter: "drop-shadow(20px -20px 8px #ff0000)" }}
                 ref={focalImageRef}
                 className="FOCAL-IMAGE w-[20vw] h-[20vw] shadow-xl mt-[100px]  shadow-red-700 rounded-3xl object-cover "
@@ -294,6 +298,7 @@ const FocalImage = () => {
                 </h1>
               </div>
               <img
+                loading="lazy"
                 style={{ filter: "drop-shadow(20px -20px 8px #3b35b0)" }}
                 className="FOCAL-IMAGE skew-y-3 w-[65vw] ml-[150px] h-[75vh] shadow-xl mt-[100px]  shadow-blue-800 rounded-3xl object-cover "
                 src={M6}
@@ -336,6 +341,7 @@ const FocalImage = () => {
                 </h1>
               </div>
               <img
+                loading="lazy"
                 style={{ filter: "drop-shadow(20px -20px 8px #fd3700)" }}
                 className="FOCAL-IMAGE skew-y-3 w-[65vw] ml-[150px] h-[75vh] shadow-xl mt-[100px]  shadow-[#fd3700] rounded-3xl object-cover "
                 src={M2}
@@ -482,6 +488,7 @@ const CosmoNauts = () => {
           </div>
         </div>
         <img
+          loading="lazy"
           src={bg}
           className="BACKROUND IMAGE absolute top-0 w-full h-screen opacity-0 scale-150 object-cover "
           alt=""
@@ -518,6 +525,7 @@ const CosmoNauts = () => {
           </div>
           <div className="ASTRONAUT w-[300px] h-[450px] ml-[1vw] absolute translate-x-[-50%] left-1/2 top-[-25vh]">
             <img
+              loading="lazy"
               src={astronaut}
               className="object-cover w-full h-full"
               alt=""
@@ -528,6 +536,7 @@ const CosmoNauts = () => {
             className="CIRCLE CIRCLE-1 w-[120px] h-[120px] rounded-full   absolute top-[300px] left-[330px] "
           >
             <img
+              loading="lazy"
               src={p5}
               className="w-full z-50 h-full absolute object-cover"
               alt=""
@@ -539,6 +548,7 @@ const CosmoNauts = () => {
             className="CIRCLE CIRCLE-2 w-[120px] h-[120px] rounded-full  absolute top-[300px] left-[330px]"
           >
             <img
+              loading="lazy"
               src={p4}
               className="w-full h-full absolute z-50 object-cover"
               alt=""
@@ -550,6 +560,7 @@ const CosmoNauts = () => {
             className="CIRCLE CIRCLE-3 w-[120px] h-[120px] rounded-full  absolute top-[300px] left-[330px] "
           >
             <img
+              loading="lazy"
               src={p3}
               className="w-full h-full absolute z-50 object-cover"
               alt=""
@@ -561,6 +572,7 @@ const CosmoNauts = () => {
             className="CIRCLE CIRCLE-4 w-[120px] h-[120px] rounded-full  absolute top-[300px] left-[330px]  "
           >
             <img
+              loading="lazy"
               src={p2}
               className="w-full h-full absolute z-50 object-cover"
               alt=""
@@ -572,6 +584,7 @@ const CosmoNauts = () => {
             className="CIRCLE CIRCLE-5 w-[120px] h-[120px] rounded-full  absolute top-[300px] left-[330px]   "
           >
             <img
+              loading="lazy"
               src={p1}
               className="w-full h-full absolute z-50 object-cover"
               alt=""
