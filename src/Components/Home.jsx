@@ -178,7 +178,7 @@ const Home = () => {
       {
         scale: 1,
         opacity: 1,
-        duration: 2,
+        duration: 3,
         // ease: "circ.inOut",
         ease: "circ.inOut",
       }

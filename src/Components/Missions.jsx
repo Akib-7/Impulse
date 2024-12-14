@@ -19,7 +19,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Missions = () => {
   return (
-    <div className="h-fit relative">
+    <div className="h-fit  relative">
       <TextMask />
       <FocalImage />
       <CosmoNauts />
@@ -32,11 +32,11 @@ export default Missions;
 const TextMask = () => {
   const introRef = useRef(null);
 
-  const introText = `"We aim to foster innovation that transcends terrestrial limitations, enabling humanity to thrive beyond our planet.
+  const introText = `We aim to foster innovation that transcends terrestrial limitations, enabling humanity to thrive beyond our planet.
 We are dedicated to building technologies that make space accessible, secure, and beneficial for generations to come.
 Our goal is not just to explore space but to establish a meaningful presence in it.
-"`;
-  const paragraphMaskAnimation = gsap.timeline();
+`;
+
   useGSAP(() => {
     const introText1 = gsap.timeline({
       scrollTrigger: {
@@ -57,10 +57,18 @@ Our goal is not just to explore space but to establish a meaningful presence in 
     });
   });
   useGSAP(() => {
+    const paragraphMaskAnimation = gsap.timeline({
+      scrollTrigger: {
+        trigger: introRef.current,
+        scrub: true,
+        start: "top 20%",
+        end: "+=1700",
+      },
+    });
     paragraphMaskAnimation.fromTo(
       ".INTRO-MISSIONS",
-      // { opacity: 0, y: -20, rotate: -20 },
-      { scale: 1.5, opacity: 0.5 },
+
+      { scale: 1.3, opacity: 0.5 },
       {
         stagger: 1,
         scale: 1,
@@ -68,20 +76,13 @@ Our goal is not just to explore space but to establish a meaningful presence in 
         opacity: 1,
         ease: "back.in",
         color: "white",
-
-        scrollTrigger: {
-          trigger: introRef.current,
-          scrub: true,
-          start: "top 15%",
-          end: "+=1700",
-        },
       }
     );
   });
   return (
     <>
-      <div className="sm:scale-75 lg:scale-95 md:scale-90  w-[99.6vw] h-[400vh] bg-black  ">
-        <div className="relative flex flex-col items-center space-y-[100px] h-full  w-full">
+      <div className=" relative w-[99.6vw] h-[400vh] bg-black ">
+        <div className="flex flex-col items-center relative  space-y-[100px] h-full  w-full">
           <div className="HEADING-TEXT0 mt-[100px]  py-8 overflow-hidden flex  items-center justify-center w-[80vw] ml-[1vw]  space-x-[190px] h-fit p-2">
             <h1 className="  text-white text-8xl font-heading2 tracking-widest ">
               {"Missions".split("").map((char, index) => (
@@ -91,11 +92,10 @@ Our goal is not just to explore space but to establish a meaningful presence in 
               ))}
             </h1>
           </div>
-          <div className="sticky top-[150px]   w-[65vw]">
+          <div ref={introRef} className="sticky top-[150px] h-[50vh] w-[65vw]">
             <div
-              ref={introRef}
               style={{ lineHeight: "2.5vw" }}
-              className="font-heading1 overflow-hidden    flex flex-wrap  px-[50px]  tracking-tight text-3xl"
+              className="font-heading1   flex flex-wrap  px-[50px]  tracking-tight text-3xl"
             >
               {introText.split(" ").map((text, index) => (
                 <div key={index} className="w-fit h-fit  ">
