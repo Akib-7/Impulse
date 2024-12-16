@@ -2,33 +2,27 @@ import "lenis/dist/lenis.css";
 import Lenis from "lenis";
 import ScrollTrigger from "gsap/src/ScrollTrigger";
 import gsap from "gsap";
+import { lazy, Suspense, useState, useEffect } from "react";
 import LoadingScreen from "./Components/LoadingScreen";
-import { useState, useEffect } from "react";
-import Home from "./Components/Home";
-import About from "./Components/About";
-import SpaceCrafts from "./Components/SpaceCrafts";
-import SpaceVehicles from "./Components/SpaceVehicles";
-import FloatingGallery from "./Components/FloatingGallery";
-import Missions from "./Components/Missions";
-import Footer from "./Components/Footer";
-import ContactUs from "./Components/ContactUs";
-
+import { BarLoader } from "react-spinners";
 gsap.registerPlugin("ScrollTrigger");
+import Home from "./Components/Home";
+// Lazy load components
+// const Home = lazy(() => import("./Components/Home"));
+const About = lazy(() => import("./Components/About"));
+const SpaceCrafts = lazy(() => import("./Components/SpaceCrafts"));
+const SpaceVehicles = lazy(() => import("./Components/SpaceVehicles"));
+const FloatingGallery = lazy(() => import("./Components/FloatingGallery"));
+const Missions = lazy(() => import("./Components/Missions"));
+const Footer = lazy(() => import("./Components/Footer"));
+const ContactUs = lazy(() => import("./Components/ContactUs"));
 
 function App() {
-  // Initialize a new Lenis instance for smooth scrolling
   const lenis = new Lenis();
-
-  // Synchronize Lenis scrolling with GSAP's ScrollTrigger plugin
   lenis.on("scroll", ScrollTrigger.update);
-
-  // Add Lenis's requestAnimationFrame (raf) method to GSAP's ticker
-  // This ensures Lenis's smooth scroll animation updates on each GSAP tick
   gsap.ticker.add((time) => {
-    lenis.raf(time * 1000); // Convert time from seconds to milliseconds
+    lenis.raf(time * 1000);
   });
-
-  // Disable lag smoothing in GSAP to prevent any delay in scroll animations
   gsap.ticker.lagSmoothing(0);
 
   const [loading, setLoading] = useState(true);
@@ -38,13 +32,12 @@ function App() {
     setLoading(false);
   };
 
-  // Detect screen size to identify mobile devices
   useEffect(() => {
     const checkScreenSize = () => {
-      setIsMobile(window.innerWidth < 1200); // Adjust width as per your design
+      setIsMobile(window.innerWidth < 1200);
     };
 
-    checkScreenSize(); // Check on load
+    checkScreenSize();
     window.addEventListener("resize", checkScreenSize);
 
     return () => {
@@ -59,7 +52,6 @@ function App() {
       ) : (
         <>
           {isMobile ? (
-            // Message for smaller devices
             <div className="flex flex-col items-center justify-center min-h-screen bg-stone-900 text-white text-center p-4">
               <h1 className="text-2xl font-bold mb-4">
                 I am working on making this website responsive!
@@ -76,32 +68,47 @@ function App() {
               ></iframe>
             </div>
           ) : (
-            // Desktop content
+            // Lazy-loaded components with Suspense
             <>
               <div id="home">
                 <Home />
               </div>
-              <div id="about">
-                <About />
-              </div>
-              <div id="space-crafts">
-                <SpaceCrafts />
-              </div>
-              <div id="space-vehicles">
-                <SpaceVehicles />
-              </div>
-              <div id="missions">
-                <Missions />
-              </div>
-              <div id="floating-gallery">
-                <FloatingGallery />
-              </div>
-              <div id="contact-us">
-                <ContactUs />
-              </div>
-              <div id="footer">
-                <Footer />
-              </div>
+              <Suspense
+                fallback={
+                  <div className="text-white w-[99.6vw] h-[100vh] bg-transparent flex items-center justify-center">
+                    <BarLoader
+                      color="white"
+                      loading={true}
+                      size={100}
+                      aria-label="Loading Spinner"
+                      data-testid="loader"
+                      className="!w-[10vw]"
+                    />
+                  </div>
+                }
+              >
+                <div id="about">
+                  <About />
+                </div>
+                <div id="space-crafts">
+                  <SpaceCrafts />
+                </div>
+                <div id="space-vehicles">
+                  <SpaceVehicles />
+                </div>
+                <div id="missions">
+                  <Missions />
+                </div>
+                <div id="floating-gallery">
+                  <FloatingGallery />
+                </div>
+                <div id="contact-us">
+                  <ContactUs />
+                </div>
+                <div id="footer">
+                  <Footer />
+                </div>
+              </Suspense>
             </>
           )}
         </>

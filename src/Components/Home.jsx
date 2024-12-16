@@ -8,7 +8,7 @@ import H from "../assets/H.webp";
 
 import Hover from "../assets/Hover.wav";
 import Hover3 from "../assets/Hover3.wav";
-import buttonClickSound from "../assets/Nav.wav";
+
 import Story3 from "../assets/Story3.wav";
 import Equalizer from "../assets/Equalizer2.json";
 
@@ -47,18 +47,12 @@ const Home = () => {
 
     HoverSound.current = new Audio(Hover);
     HoverSound.current.volume = 0.1;
-
-    buttonSound.current = new Audio(buttonClickSound);
-    buttonSound.current.volume = 0.1;
   }, []);
   const playNavClickSound = () => {
     NavSound.current.currentTime = 0;
     NavSound.current.play();
   };
-  const playButtonSound = () => {
-    buttonSound.current.currentTime = 0;
-    buttonSound.current.play();
-  };
+
   const handleNav = () => {
     if (close) {
       gsap.to(".Navbar", {
@@ -173,12 +167,13 @@ const Home = () => {
       bgImageRef.current,
       {
         opacity: 0,
-        scale: 3,
+        scale: 2.5,
       },
       {
+        delay: 0.5,
         scale: 1,
         opacity: 1,
-        duration: 3,
+        duration: 2,
         // ease: "circ.inOut",
         ease: "circ.inOut",
       }
@@ -244,14 +239,14 @@ const Home = () => {
   return (
     <div
       style={{ zIndex: 80 }}
-      className=" h-screen relative overflow-hidden  bg-cover bg-center"
+      className=" h-[100vh] w-[99.6vw] relative overflow-hidden  bg-cover bg-center"
     >
       <div
         ref={bgImageRef}
         className="absolute top-0 w-[99.6vw] h-screen left-1/2 translate-x-[-50%]"
       >
         <img
-          loading="eager"
+          loading="lazy"
           src={H}
           alt="Background Image"
           className="w-full h-full object-cover object-center"

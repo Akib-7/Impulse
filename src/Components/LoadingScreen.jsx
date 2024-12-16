@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { BarLoader, CircleLoader } from "react-spinners";
+import { BarLoader } from "react-spinners";
 import DummyPages from "./DummyPages";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";

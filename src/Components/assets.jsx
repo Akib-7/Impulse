@@ -11,7 +11,7 @@ import Planet2 from "../assets/planet2.webp";
 import Planet3 from "../assets/planet3.webp";
 import Planet4 from "../assets/planet4.webp";
 import Planet5 from "../assets/planet5.webp";
-import Image188 from "../assets/188.jpg";
+
 import M1 from "../assets/M1.webp";
 import M3 from "../assets/M3.webp";
 import M4 from "../assets/M3.webp";
@@ -35,7 +35,7 @@ export const assets = [
   Planet3,
   Planet4,
   Planet5,
-  Image188,
+
   M1,
   Landing1,
   M6,

@@ -27,18 +27,7 @@ const SpaceCrafts = () => {
     const cursor = document.querySelector(".CURSOR");
     HoverSound.current = new Audio(Hover);
     HoverSound.current.volume = 0.1;
-    const playMuted = async () => {
-      try {
-        HoverSound.current.muted = true; // Mute the audio
-        await HoverSound.current.play(); // Attempt to play
-        HoverSound.current.pause(); // Pause immediately
-        HoverSound.current.muted = false; // Unmute for future playbacks
-      } catch (err) {
-        console.error("Muted playback failed:", err);
-      }
-    };
 
-    playMuted();
     const handleMouseMove = (e) => {
       const canvasRect = canvas.getBoundingClientRect();
       const offsetX = canvasRect.left;

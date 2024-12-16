@@ -5,7 +5,7 @@ import p2 from "../assets/planet2.webp";
 import p3 from "../assets/planet3.webp";
 import p4 from "../assets/planet4.webp";
 import p5 from "../assets/planet5.webp";
-import bg from "../assets/188.jpg";
+
 import M1 from "../assets/M1.webp";
 import M2 from "../assets/Landing1.webp";
 import M6 from "../assets/M6.webp";
@@ -487,12 +487,7 @@ const CosmoNauts = () => {
             </h2>
           </div>
         </div>
-        <img
-          loading="lazy"
-          src={bg}
-          className="BACKROUND IMAGE absolute top-0 w-full h-screen opacity-0 scale-150 object-cover "
-          alt=""
-        />
+
         <div
           ref={circleContainerRef}
           className="CIRCLE-CONTAINER  mt-[30vh] w-[800px] h-[500px]   relative"
