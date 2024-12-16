@@ -93,6 +93,12 @@ const Home = () => {
   const button2Ref = useRef(null);
 
   useGSAP(() => {
+    gsap.to(button1Ref.current, {
+      opacity: 0.2,
+      repeat: -1,
+      duration: 3,
+      ease: "linear",
+    });
     t1.fromTo(
       ".Navbar",
       {
