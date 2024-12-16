@@ -173,9 +173,9 @@ const Home = () => {
         delay: 0.5,
         scale: 1,
         opacity: 1,
-        duration: 2,
+        duration: 3,
         // ease: "circ.inOut",
-        ease: "circ.inOut",
+        ease: "power3.inOut",
       }
     );
   });
