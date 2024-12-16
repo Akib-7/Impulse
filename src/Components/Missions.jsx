@@ -15,6 +15,7 @@ import saturn from "../assets/saturn.webp";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import ContactUs from "./ContactUs";
 gsap.registerPlugin(ScrollTrigger);
 
 const Missions = () => {
@@ -343,7 +344,7 @@ const FocalImage = () => {
               <img
                 loading="lazy"
                 style={{ filter: "drop-shadow(20px -20px 8px #fd3700)" }}
-                className="FOCAL-IMAGE skew-y-3 w-[65vw] ml-[150px] h-[75vh] shadow-xl mt-[100px]  shadow-[#fd3700] rounded-3xl object-cover "
+                className="FOCAL-IMAGE skew-y-3 w-[65vw] ml-[150px] h-[75vh] shadow-xl mt-[100px]  shadow-[#fd3700] rounded-3xl  "
                 src={M2}
                 alt=""
               />

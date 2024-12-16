@@ -367,7 +367,6 @@ const FloatingGallery = () => {
             style={{
               width: "100%",
               height: "100%",
-              objectFit: "cover",
             }}
             className={`cursor-pointer  transition-all duration-150 ease-in `}
             src={M2}
